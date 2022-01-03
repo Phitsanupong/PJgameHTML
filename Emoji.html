@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- CSS only -->
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 " crossorigin="anonymous ">
+</head>
+
+<body>
+    <div id="example-1" class="container">
+        <button class="btn btn-outline-primary " @click="like()"><img src="/images/like.png "width= "50 " height="50 ">{{ like1 }}</button>
+        <button class="btn btn-outline-primary " @click="love()"><img src="/images/love.png "width= "50 " height="50 ">{{ love2 }}</button>
+        <button class="btn btn-outline-primary " @click="laughing()"><img src="/images/laughing.png "width= "50 " height="50 ">{{ laughing3 }}</button>
+        <button class="btn btn-outline-primary " @click="wow()"><img src="/images/wow.png "width= "50 " height="50 ">{{ wow4 }}</button>
+        <button class="btn btn-outline-primary " @click="sad()"><img src="/images/sad.png "width= "50 " height="50 ">{{ sad5 }}</button>
+        <button class="btn btn-outline-primary " @click="angry()"><img src="/images/angry.png "width= "50 " height="50 ">{{ angry6 }}</button>
+        <p>{{ counter }} times.</p>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+</body>
+
+</html>
+
+<script>
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            counter: 0,
+            like1: 0,
+            love2: 0,
+            laugh3: 0,
+            wow4: 0,
+            sad5: 0,
+            angry6: 0,
+        },
+        methods: {
+            like: function() {
+                this.counter += 10;
+                this.like1 += 1;
+            },
+            love: function() {
+                this.counter += 20;
+                this.love2 += 1;
+            },
+            laughhing: function() {
+                this.counter += 25;
+                this.laugh3 += 1;
+            },
+            wow: function() {
+                this.counter += 30;
+                this.wow4 += 1;
+            },
+            sad: function() {
+                this.counter -= 15;
+                this.sad5 += 1;
+            },
+            angry: function() {
+                this.counter -= 50;
+                this.angry6 += 1;
+            },
+        },
+    })
+</script>
